@@ -203,7 +203,7 @@ def get_screenshots_of_reddit_posts(reddit_object: dict, screenshot_num: int):
             raise e
 
         if storymode:
-            page.locator('[data-click-id="text"]').first.screenshot(
+            page.locator('div[data-post-click-location="text-body"]').first.screenshot(
                 path=f"assets/temp/{reddit_id}/png/story_content.png"
             )
         else:
